@@ -16,7 +16,7 @@
 
 @implementation BOFGame
 
-@synthesize numberOfPlayers, activePlayerNumber, activeTeamNumber, firstTeamScore, secondTeamScore, round, timer, secondsRemaining, playersPerTeam, masterList, bowl, table, gameView, itemView, roundView, itemsRemainingForActivePlayer, active, activeItem, winningTeam, gameOverView;
+@synthesize numberOfPlayers, activePlayerNumber, activeTeamNumber, firstTeamScore, firstTeamName, firstTeamPlayers, secondTeamScore, secondTeamName, secondTeamPlayers, round, timer, secondsRemaining, playersPerTeam, masterList, bowl, table, gameView, itemView, roundView, itemsRemainingForActivePlayer, active, activeItem, winningTeam, gameOverView;
 
 
 - (id) init
@@ -37,8 +37,8 @@
         [self setMasterList:[[NSMutableSet alloc] init]];
         [self setBowl:[[NSMutableArray alloc] init]];
         [self setTable:[[NSMutableArray alloc] init]];
-        
-        [self setGameView:[[BOFGameViewController alloc] initWithGame:self]];
+        [self setFirstTeamPlayers:[[NSMutableDictionary alloc] init]];
+        [self setSecondTeamPlayers:[[NSMutableDictionary alloc] init]];        [self setGameView:[[BOFGameViewController alloc] initWithGame:self]];
         [self setItemView:[[BOFItemSubmitViewController alloc] initWithGame:self]];
         [self setRoundView:[[BOFRoundViewController alloc] initWithGame:self]];
         
@@ -55,6 +55,10 @@
     [self setActivePlayerNumber:1];
     [self setActiveTeamNumber:1];
     [self setFirstTeamScore:0];
+    [self setFirstTeamName:@""];
+    [self setSecondTeamName:@""];
+    [self setFirstTeamPlayers:[[NSMutableDictionary alloc] init]];
+    [self setSecondTeamPlayers:[[NSMutableDictionary alloc] init]];
     [self setSecondTeamScore:0];
     [self setRound:SELECTING_PLAYERS];
     [self endTimer];
@@ -74,7 +78,6 @@
 
 - (void) gameEnteringItems
 {
-    
     [self setRound:ENTERING_ITEMS];
     [self setActivePlayerNumber:1];
     [self setActiveTeamNumber:1];
@@ -158,17 +161,37 @@
     
 }
 
-- (NSString *) activePlayerNumberString
+- (NSString *) activePlayerString
 {
     
-    return [NSString stringWithFormat:@"%d", activePlayerNumber];
+    NSString * key = [NSString stringWithFormat:@"Player %d", activePlayerNumber];
     
+    if (activeTeamNumber == 1) {
+        
+        if ([firstTeamPlayers objectForKey:key]){
+            return [firstTeamPlayers objectForKey:key];
+        }
+        
+    } else {
+       
+        if ([secondTeamPlayers objectForKey:key]){
+            return [secondTeamPlayers objectForKey:key];
+        }
+        
+        
+    }
+    
+    return key;
 }
 
-- (NSString *) activeTeamNumberString
+- (NSString *) activeTeamString
 {
     
-    return [NSString stringWithFormat:@"%d", activeTeamNumber];
+    if (activeTeamNumber == 1) {
+        return [self firstTeamName];
+    } else {
+        return [self secondTeamName];
+    }
     
 }
 
@@ -231,8 +254,14 @@
 - (NSString *) winningTeamString
 {
     
-    if (winningTeam != 0) {
-        return [NSString stringWithFormat:@"Team %d", winningTeam];
+    if (winningTeam == 1) {
+        
+        return firstTeamName;
+        
+    } else if (winningTeam == 2) {
+        
+        return secondTeamName;
+        
     } else {
         return @"Both Teams!";
     }
@@ -245,6 +274,21 @@
         return [NSString stringWithFormat:@"%d - %d", firstTeamScore, secondTeamScore];
     } else {
         return [NSString stringWithFormat:@"%d - %d", secondTeamScore, firstTeamScore];
+    }
+    
+}
+
+- (void) setActivePlayerName:(NSString *)name
+{
+    
+    if (activeTeamNumber == 1){
+        
+        [[self firstTeamPlayers] setValue:name forKey:[NSString stringWithFormat:@"Player %d", activePlayerNumber]];
+        
+    } else {
+        
+        [[self secondTeamPlayers] setValue:name forKey:[NSString stringWithFormat:@"Player %d", activePlayerNumber]];
+        
     }
     
 }
@@ -277,9 +321,7 @@
             }
         }
     } if ((round == ROUND_ONE ) || (round == ROUND_TWO) || (round == ROUND_THREE)) {
-        
-        AudioServicesPlaySystemSound(1024);
-        
+                
         if (activeTeamNumber == 1) {
             
             [self setActiveTeamNumber:2];

@@ -14,6 +14,10 @@
     
     __weak IBOutlet UILabel *playerNumberLabel;
     
+    __weak IBOutlet UITextField *firstTeamName;
+    
+    __weak IBOutlet UITextField *secondTeamName;
+    
 }
 
 @property (nonatomic, weak) BOFGame * game;

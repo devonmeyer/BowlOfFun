@@ -32,7 +32,7 @@
 #import <Foundation/Foundation.h>
 @class BOFGameViewController, BOFItemSubmitViewController, BOFRoundViewController, BOFItem, BOFGameOverViewController;
 
-static int itemsPerPerson = 6;
+static int itemsPerPerson = 2;
 
 @interface BOFGame : NSObject
 
@@ -57,7 +57,15 @@ typedef enum gameRoundTypes
 
 @property (nonatomic) int firstTeamScore;
 
+@property (nonatomic, copy) NSString * firstTeamName;
+
+@property (nonatomic) NSMutableDictionary * firstTeamPlayers;
+
 @property (nonatomic) int secondTeamScore;
+
+@property (nonatomic, copy) NSString * secondTeamName;
+
+@property (nonatomic) NSMutableDictionary * secondTeamPlayers;
 
 @property (nonatomic) int itemsRemainingForActivePlayer;
 
@@ -105,11 +113,13 @@ typedef enum gameRoundTypes
 
 - (void) addPlayerItemWithString:(NSString *)string;
 
+- (void) setActivePlayerName:(NSString *)name;
+
 - (NSString *) itemsRemainingForActivePlayerString;
 
-- (NSString *) activePlayerNumberString;
+- (NSString *) activePlayerString;
 
-- (NSString *) activeTeamNumberString;
+- (NSString *) activeTeamString;
 
 - (NSString *) firstTeamScoreString;
 

@@ -69,23 +69,53 @@
 
 - (void) didEndEditing:(id)sender
 {
-    NSString * itemText = [sender text];
-    
-    [[self game] addPlayerItemWithString:itemText];
-    
-    if ([self makeTransition]) {
-        [self performTransition];
-    } else {
-        [self refreshView];
+
+    if ([[sender text] length] > 0 ) {
+        
+        [[self game] addPlayerItemWithString:[sender text]];
+        
+        if ([self makeTransition]) {
+            
+            [self performTransition];
+            
+        } else {
+            
+            [self refreshView];
+            
+        }
     }
+}
+
+- (IBAction)didEndEnteringName:(id)sender
+{
+    if ([[sender text] length] > 0 ) {        
+        
+        [[self game] setActivePlayerName:[sender text]];
+        
+        [self refreshView];
+        
+    }
+    
 }
 
 - (void) refreshView
 {
     [itemTextField becomeFirstResponder];
     [itemTextField setText:@""];
-    [playerNumberLabel setText:[[self game] activePlayerNumberString]];
-    [teamNumberLabel setText:[[self game] activeTeamNumberString]];
+    
+    [activeTeamLabel setText:[[self game] activeTeamString]];
+    
+    NSString * name = [[self game] activePlayerString];
+        
+    if ([name isEqualToString:[NSString stringWithFormat:@"Player %d", [[self game] activePlayerNumber]]]) {
+        [activePlayerTextField setEnabled:YES];
+        [activePlayerTextField setText:@""];
+        [activePlayerTextField setPlaceholder:name];
+    } else {
+        [activePlayerTextField setText:name];
+        [activePlayerTextField setEnabled:NO];
+    }
+    
     [remainingItemsLabel setText:[[self game] itemsRemainingForActivePlayerString]];
     
 }

@@ -13,9 +13,9 @@
 <UITextFieldDelegate>
 {
     
-    __weak IBOutlet UILabel *teamNumberLabel;
+    __weak IBOutlet UILabel *activeTeamLabel;
     
-    __weak IBOutlet UILabel *playerNumberLabel;
+    __weak IBOutlet UITextField *activePlayerTextField;
     
     __weak IBOutlet UILabel *remainingItemsLabel;
     
@@ -32,5 +32,7 @@
 - (id) initWithGame:(BOFGame *)theGame;
 
 - (IBAction)didEndEditing:(id)sender;
+
+- (IBAction)didEndEnteringName:(id)sender;
 
 @end

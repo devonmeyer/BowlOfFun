@@ -68,8 +68,8 @@
         
     } else {
         
-        [teamNumberLabel setText:[[self game] activeTeamNumberString]];
-        [playerNumberLabel setText:[[self game] activePlayerNumberString]];
+        [activeTeamLabel setText:[[self game] activeTeamString]];
+        [activePlayerLabel setText:[[self game] activePlayerString]];
         
         [roundNumberLabel setText:[[self game] activeRoundString]];
         [roundDescriptionLabel setText:[[self game] activeRoundDescriptionString]];

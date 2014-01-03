@@ -58,9 +58,22 @@
     
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField resignFirstResponder];
+    return YES;
+    
+}
+
 - (IBAction)playButtonPressed:(id)sender {
     
     [[self game] setNumberOfPlayers:[[playerNumberLabel text] intValue]];
+    
+    [[self game] setFirstTeamName:[firstTeamName text]];
+    
+    [[self game] setSecondTeamName:[secondTeamName text]];
+
     
     // Add item addition screen
     

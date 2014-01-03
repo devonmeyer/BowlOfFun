@@ -13,9 +13,9 @@
 @interface BOFRoundViewController : UIViewController
 {
     
-    __weak IBOutlet UILabel *teamNumberLabel;
-    
-    __weak IBOutlet UILabel *playerNumberLabel;
+    __weak IBOutlet UILabel *activeTeamLabel;
+
+    __weak IBOutlet UILabel *activePlayerLabel;
     
     __weak IBOutlet UILabel *roundNumberLabel;
     
