@@ -19,6 +19,17 @@
 		FFA7A32D1875FBB600609579 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA7A3151875FBB600609579 /* UIKit.framework */; };
 		FFA7A3351875FBB600609579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFA7A3331875FBB600609579 /* InfoPlist.strings */; };
 		FFA7A3371875FBB600609579 /* BowlOfFunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA7A3361875FBB600609579 /* BowlOfFunTests.m */; };
+		FFA7A3421875FBCC00609579 /* BOFItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA7A3411875FBCC00609579 /* BOFItem.m */; };
+		FFF38EBB1875FD6300BB7FFF /* BOFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF38EB91875FD6300BB7FFF /* BOFGameViewController.m */; };
+		FFF38EBC1875FD6300BB7FFF /* BOFGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF38EBA1875FD6300BB7FFF /* BOFGameViewController.xib */; };
+		FFF38EC0187604A100BB7FFF /* BOFItemSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF38EBE187604A100BB7FFF /* BOFItemSubmitViewController.m */; };
+		FFF38EC1187604A100BB7FFF /* BOFItemSubmitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF38EBF187604A100BB7FFF /* BOFItemSubmitViewController.xib */; };
+		FFF38EC51876229200BB7FFF /* BOFRoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF38EC31876229200BB7FFF /* BOFRoundViewController.m */; };
+		FFF38EC61876229200BB7FFF /* BOFRoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF38EC41876229200BB7FFF /* BOFRoundViewController.xib */; };
+		FFF38EC9187648A300BB7FFF /* BOFGame.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF38EC8187648A300BB7FFF /* BOFGame.m */; };
+		FFF38ECD18766C2000BB7FFF /* BOFGameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF38ECB18766C2000BB7FFF /* BOFGameOverViewController.m */; };
+		FFF38ECE18766C2000BB7FFF /* BOFGameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF38ECC18766C2000BB7FFF /* BOFGameOverViewController.xib */; };
+		FFF38ED01876781700BB7FFF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF38ECF1876781700BB7FFF /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,23 @@
 		FFA7A3321875FBB600609579 /* BowlOfFunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BowlOfFunTests-Info.plist"; sourceTree = "<group>"; };
 		FFA7A3341875FBB600609579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFA7A3361875FBB600609579 /* BowlOfFunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BowlOfFunTests.m; sourceTree = "<group>"; };
+		FFA7A3401875FBCC00609579 /* BOFItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFItem.h; sourceTree = "<group>"; };
+		FFA7A3411875FBCC00609579 /* BOFItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFItem.m; sourceTree = "<group>"; };
+		FFF38EB81875FD6300BB7FFF /* BOFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFGameViewController.h; sourceTree = "<group>"; };
+		FFF38EB91875FD6300BB7FFF /* BOFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFGameViewController.m; sourceTree = "<group>"; };
+		FFF38EBA1875FD6300BB7FFF /* BOFGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BOFGameViewController.xib; sourceTree = "<group>"; };
+		FFF38EBD187604A100BB7FFF /* BOFItemSubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFItemSubmitViewController.h; sourceTree = "<group>"; };
+		FFF38EBE187604A100BB7FFF /* BOFItemSubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFItemSubmitViewController.m; sourceTree = "<group>"; };
+		FFF38EBF187604A100BB7FFF /* BOFItemSubmitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BOFItemSubmitViewController.xib; sourceTree = "<group>"; };
+		FFF38EC21876229200BB7FFF /* BOFRoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFRoundViewController.h; sourceTree = "<group>"; };
+		FFF38EC31876229200BB7FFF /* BOFRoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFRoundViewController.m; sourceTree = "<group>"; };
+		FFF38EC41876229200BB7FFF /* BOFRoundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BOFRoundViewController.xib; sourceTree = "<group>"; };
+		FFF38EC7187648A300BB7FFF /* BOFGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFGame.h; sourceTree = "<group>"; };
+		FFF38EC8187648A300BB7FFF /* BOFGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFGame.m; sourceTree = "<group>"; };
+		FFF38ECA18766C2000BB7FFF /* BOFGameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOFGameOverViewController.h; sourceTree = "<group>"; };
+		FFF38ECB18766C2000BB7FFF /* BOFGameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOFGameOverViewController.m; sourceTree = "<group>"; };
+		FFF38ECC18766C2000BB7FFF /* BOFGameOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BOFGameOverViewController.xib; sourceTree = "<group>"; };
+		FFF38ECF1876781700BB7FFF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF38ED01876781700BB7FFF /* AudioToolbox.framework in Frameworks */,
 				FFA7A3141875FBB600609579 /* CoreGraphics.framework in Frameworks */,
 				FFA7A3161875FBB600609579 /* UIKit.framework in Frameworks */,
 				FFA7A3121875FBB600609579 /* Foundation.framework in Frameworks */,
@@ -77,6 +106,8 @@
 		FFA7A3051875FBB600609579 = {
 			isa = PBXGroup;
 			children = (
+				FFA7A3401875FBCC00609579 /* BOFItem.h */,
+				FFA7A3411875FBCC00609579 /* BOFItem.m */,
 				FFA7A3171875FBB600609579 /* BowlOfFun */,
 				FFA7A3301875FBB600609579 /* BowlOfFunTests */,
 				FFA7A3101875FBB600609579 /* Frameworks */,
@@ -96,6 +127,7 @@
 		FFA7A3101875FBB600609579 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFF38ECF1876781700BB7FFF /* AudioToolbox.framework */,
 				FFA7A3111875FBB600609579 /* Foundation.framework */,
 				FFA7A3131875FBB600609579 /* CoreGraphics.framework */,
 				FFA7A3151875FBB600609579 /* UIKit.framework */,
@@ -109,6 +141,20 @@
 			children = (
 				FFA7A3201875FBB600609579 /* BOFAppDelegate.h */,
 				FFA7A3211875FBB600609579 /* BOFAppDelegate.m */,
+				FFF38EB81875FD6300BB7FFF /* BOFGameViewController.h */,
+				FFF38EB91875FD6300BB7FFF /* BOFGameViewController.m */,
+				FFF38EBD187604A100BB7FFF /* BOFItemSubmitViewController.h */,
+				FFF38EBE187604A100BB7FFF /* BOFItemSubmitViewController.m */,
+				FFF38EC21876229200BB7FFF /* BOFRoundViewController.h */,
+				FFF38EC31876229200BB7FFF /* BOFRoundViewController.m */,
+				FFF38EC7187648A300BB7FFF /* BOFGame.h */,
+				FFF38EC8187648A300BB7FFF /* BOFGame.m */,
+				FFF38ECA18766C2000BB7FFF /* BOFGameOverViewController.h */,
+				FFF38ECB18766C2000BB7FFF /* BOFGameOverViewController.m */,
+				FFF38ECC18766C2000BB7FFF /* BOFGameOverViewController.xib */,
+				FFF38EC41876229200BB7FFF /* BOFRoundViewController.xib */,
+				FFF38EBF187604A100BB7FFF /* BOFItemSubmitViewController.xib */,
+				FFF38EBA1875FD6300BB7FFF /* BOFGameViewController.xib */,
 				FFA7A3231875FBB600609579 /* Images.xcassets */,
 				FFA7A3181875FBB600609579 /* Supporting Files */,
 			);
@@ -221,6 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA7A31C1875FBB600609579 /* InfoPlist.strings in Resources */,
+				FFF38EC61876229200BB7FFF /* BOFRoundViewController.xib in Resources */,
+				FFF38ECE18766C2000BB7FFF /* BOFGameOverViewController.xib in Resources */,
+				FFF38EC1187604A100BB7FFF /* BOFItemSubmitViewController.xib in Resources */,
+				FFF38EBC1875FD6300BB7FFF /* BOFGameViewController.xib in Resources */,
 				FFA7A3241875FBB600609579 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF38EC9187648A300BB7FFF /* BOFGame.m in Sources */,
 				FFA7A3221875FBB600609579 /* BOFAppDelegate.m in Sources */,
+				FFF38ECD18766C2000BB7FFF /* BOFGameOverViewController.m in Sources */,
+				FFF38EC51876229200BB7FFF /* BOFRoundViewController.m in Sources */,
+				FFA7A3421875FBCC00609579 /* BOFItem.m in Sources */,
+				FFF38EBB1875FD6300BB7FFF /* BOFGameViewController.m in Sources */,
 				FFA7A31E1875FBB600609579 /* main.m in Sources */,
+				FFF38EC0187604A100BB7FFF /* BOFItemSubmitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +498,7 @@
 				FFA7A33C1875FBB600609579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA7A33D1875FBB600609579 /* Build configuration list for PBXNativeTarget "BowlOfFunTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +507,7 @@
 				FFA7A33F1875FBB600609579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

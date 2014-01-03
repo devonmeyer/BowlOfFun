@@ -7,6 +7,8 @@
 //
 
 #import "BOFAppDelegate.h"
+#import "BOFGameViewController.h"
+#import "BOFGame.h"
 
 @implementation BOFAppDelegate
 
@@ -14,6 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    [self setGame:[[BOFGame alloc] init]];
+    
+    [[self window] setRootViewController:[[self game] gameView]];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
